@@ -1,91 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 
+import Course from './components/Course';
+
 export default function App() {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.header1}>Courses</Text>
       <View style={styles.tilesContainer}>
-        <View style={styles.tile}>
-          <Image
-            style={styles.tileImage}
-            source={require('./assets/courseImages/macbook-code.jpg')}
-          />
-          <View style={styles.tileDetail}>
-            <Text style={styles.tileHeader}>Development 1 (YP0584 | 2022)</Text>
-            <Text style={styles.tileText}>Development 1 (YP0584 | 2022)</Text>
-          </View>
-        </View>
-        <View style={styles.tile}>
-          <Image
-            style={styles.tileImage}
-            source={require('./assets/courseImages/sensors.jpg')}
-          />
-          <View style={styles.tileDetail}>
-            <Text style={styles.tileHeader}>Development 2 (YP0859 | 2022)</Text>
-            <Text style={styles.tileText}>Development 2 (YP0859 | 2022)</Text>
-          </View>
-        </View>
-        <View style={styles.tile}>
-          <Image
-            style={styles.tileImage}
-            source={require('./assets/courseImages/phone-desk.jpg')}
-          />
-          <View style={styles.tileDetail}>
-            <Text style={styles.tileHeader}>Development 3 (YP0833 | 2022)</Text>
-            <Text style={styles.tileText}>Development 3 (YP0833 | 2022)</Text>
-          </View>
-        </View>
-        <View style={styles.tile}>
-          <Image
-            style={styles.tileImage}
-            source={require('./assets/courseImages/php.jpg')}
-          />
-          <View style={styles.tileDetail}>
-            <Text style={styles.tileHeader}>Development 4 (YP0860 | 2022)</Text>
-            <Text style={styles.tileText}>Development 4 (YP0860 | 2022)</Text>
-          </View>
-        </View>
-        <View style={styles.tile}>
-          <Image
-            style={styles.tileImage}
-            source={require('./assets/courseImages/idea.jpg')}
-          />
-          <View style={styles.tileDetail}>
-            <Text style={styles.tileHeader}>Lab 1 (YP0584 | 2022)</Text>
-            <Text style={styles.tileText}>Lab 1 (YP0584 | 2022)</Text>
-          </View>
-        </View>
-        <View style={styles.tile}>
-          <Image
-            style={styles.tileImage}
-            source={require('./assets/courseImages/ideas.jpg')}
-          />
-          <View style={styles.tileDetail}>
-            <Text style={styles.tileHeader}>Lab 2 (YP0584 | 2022)</Text>
-            <Text style={styles.tileText}>Lab 2 (YP0584 | 2022)</Text>
-          </View>
-        </View>
-        <View style={styles.tile}>
-          <Image
-            style={styles.tileImage}
-            source={require('./assets/courseImages/macbook-code.jpg')}
-          />
-          <View style={styles.tileDetail}>
-            <Text style={styles.tileHeader}>Lab 3 (YP0584 | 2022)</Text>
-            <Text style={styles.tileText}>Lab 3 (YP0584 | 2022)</Text>
-          </View>
-        </View>
-        <View style={styles.tile}>
-          <Image
-            style={styles.tileImage}
-            source={require('./assets/courseImages/sketch.jpg')}
-          />
-          <View style={styles.tileDetail}>
-            <Text style={styles.tileHeader}>Creatie 2 (YP0584 | 2022)</Text>
-            <Text style={styles.tileText}>Creatie 2 (YP0584 | 2022)</Text>
-          </View>
-        </View>
+        <Course title="Development1" subtitle="YP0683" />
+        <Course title="Design 3" subtitle="YP1234" />
+        <Course title="Communicatie 3" subtitle="YP9988" />
+        <Course title="Ethiek" subtitle="YP3256" />
+        <Course title="Ondernemerschap" subtitle="YP2233" />
         <StatusBar style="auto" />
       </View>
     </ScrollView>
@@ -110,30 +37,5 @@ const styles = StyleSheet.create({
     flexShrink: 0,
     justifyContent: 'space-evenly',
 
-  },
-  tile: {
-    flexBasis: '46%',//200
-    borderRadius: 5,
-    borderColor: '#B4B8DA',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    marginVertical: '2%',
-
-  },
-  tileImage: {
-    width: '100%',
-    maxHeight: 110,
-    overflow: 'hidden',
-  },
-  tileDetail: {
-    padding: 10,
-  },
-  tileHeader: {
-    fontSize: 22,
-    fontWeight: '600',
-  },
-  tileText: {
-    fontSize: 16,
-    fontWeight: '500',
   }
 });
