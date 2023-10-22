@@ -3,10 +3,10 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 const Course = props => {
   return (
     <View style={styles.tile}>
-      <Image
+      {/* <Image
         style={styles.tileImage}
         source={require('./../assets/courseImages/macbook-code.jpg')}
-      />
+      /> */}
       <View style={styles.tileDetail}>
         <Text style={styles.tileHeader}>{props.title}</Text>
         <Text style={styles.tileText}>{props.subtitle}</Text>

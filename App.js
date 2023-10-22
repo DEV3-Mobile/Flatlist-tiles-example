@@ -1,21 +1,39 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, FlatList } from 'react-native';
 
 import Course from './components/Course';
 
+const courses = [
+  {
+    title: 'Development 1',
+    code: 'YP0683'
+  }, {
+    title: 'Design 3',
+    code: 'YP1234'
+  }, {
+    title: 'Communicatie 3',
+    code: 'YP9988',
+  }, {
+    title: 'Ethiek',
+    code: 'YP3256'
+  }, {
+    title: 'Ondernemerschap',
+    code: 'YP2233'
+  }
+
+];
+
 export default function App() {
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <Text style={styles.header1}>Courses</Text>
       <View style={styles.tilesContainer}>
-        <Course title="Development1" subtitle="YP0683" />
-        <Course title="Design 3" subtitle="YP1234" />
-        <Course title="Communicatie 3" subtitle="YP9988" />
-        <Course title="Ethiek" subtitle="YP3256" />
-        <Course title="Ondernemerschap" subtitle="YP2233" />
-        <StatusBar style="auto" />
+        <FlatList style={styles.tile} data={courses}
+          renderItem={(itemData) => < Course title={itemData.item.title} subtitle={itemData.item.subtitle} />
+          }
+        />
       </View>
-    </ScrollView>
+    </View>
   );
 }
 
